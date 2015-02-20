@@ -4,7 +4,7 @@ pushd $DOT_FILES_DIR/home >/dev/null 2>&1
 path_prefix=`pwd`
 for filename in `ls`
 do
-	ln -si $path_prefix/$filename $HOME/.$filename
+	ln -sfn $path_prefix/$filename $HOME/.$filename
 done
 popd >/dev/null 2>&1
 echo "Created symlinks to dotfiles"
