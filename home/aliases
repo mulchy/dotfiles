@@ -1,0 +1,13 @@
+alias ra='pushd ~/Code/Code42/apple-core/Scripts;
+    ./resetAll.sh;  rm -rf ~/SharePlanDEBUG;  rm -rf ~/Library/Application\ Support/Code42ServiceDebug;
+    launchctl remove com.code42.service.ServiceDebug;
+    launchctl remove com.code42.service.helper.SharePlanDebug;
+    launchctl remove com.code42.SharePlanMenuItemDebug;
+    defaults delete com.code42.service.ServiceDebug;
+    popd;'
+alias gs='git status'
+alias "less=less -R"
+alias "tree=tree -C"
+alias "markdown=Markdown.pl"
+alias edge="cd $EDGE_CASE"
+alias noise="afplay /System/Library/Sounds/Submarine.aiff -v 10"
