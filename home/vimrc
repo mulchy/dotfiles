@@ -25,6 +25,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
 Plugin 'itspriddle/vim-marked'
 Plugin 'tpope/vim-fugitive'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 """"""""""""" End Vundle stuff
 filetype plugin indent on "required for vundle
@@ -97,8 +98,8 @@ let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
 let g:airline_theme='badwolf'
-let g:airline_enable_branch     = 1
-let g:airline_enable_syntastic  = 1
+"let g:airline_enable_branch     = 1
+"let g:airline_enable_syntastic  = 1
 
 " force .md files to showup as markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown

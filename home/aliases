@@ -11,3 +11,5 @@ alias "tree=tree -C"
 alias "markdown=Markdown.pl"
 alias edge="cd $EDGE_CASE"
 alias noise="afplay /System/Library/Sounds/Submarine.aiff -v 10"
+alias date=gdate
+alias open-ports='sudo lsof -i -P | grep -i "listen"'
