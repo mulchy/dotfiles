@@ -115,3 +115,4 @@ canILeaveYet() {
       echo "It's still 2015 :("
   fi
 }
+eval "$(rbenv init -)"
