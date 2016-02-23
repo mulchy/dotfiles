@@ -3,18 +3,9 @@
 	email = ryan@primeacademy.io
 [push]
 	default = upstream
-[merge]
-	tool = diffmerge
-[mergetool "diffmerge"]
-	cmd = diffmerge --nosplash --merge -t1='Local' -t2='Base (merged)' -t3='Remote' --result=$MERGED $LOCAL $BASE $REMOTE
-	trustExitCode = true
-[mergetool]
-	keepBackup = false
 [diff]
-	tool = diffmerge
-[difftool "diffmerge"]
-	cmd = diffmerge --nosplash -t1='Local' -t2='Remote' $LOCAL $REMOTE
+	tool = opendiff
 [color]
 	ui = true
 [core]
-	editor = vim
+	editor = emacs
