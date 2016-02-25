@@ -4,3 +4,4 @@ alias "tree=tree -C"
 alias noise="afplay /System/Library/Sounds/Submarine.aiff -v 10"
 alias date=gdate
 alias open-ports='sudo lsof -i -P | grep -i "listen"'
+alias vim='emacs -nw'
