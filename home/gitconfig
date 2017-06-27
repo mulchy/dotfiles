@@ -1,6 +1,6 @@
 [user]
 	name = Ryan Mulcahy
-	email = ryan@primeacademy.io
+	email = rmulcahy@gravie.com
 [push]
 	default = upstream
 [diff]
@@ -8,4 +8,4 @@
 [color]
 	ui = true
 [core]
-	editor = emacs -nw
+	editor = emacsclient -nw

@@ -37,7 +37,7 @@ ZSH_THEME="norm"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -45,20 +45,11 @@ ZSH_THEME="norm"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby lein cabal)
+plugins=(git rails ruby lein cabal brew docker httpie npm tmux osx)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH=/usr/local/Cellar/protobuf241/2.4.1/bin:/usr/local/bin:$HOME/bin:$HOME/Scripts:$HOME/.cabal/bin:$PATH:$HOME/.rvm/bin
-export ANT_OPTS="-Xmx2048m -Xms512m"
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
-export GOPATH=$HOME/Code/Go
-export CORE=$HOME/Code/Code42/core
-export EDGE_CASE=$HOME/Code/Code42/edge_case
-export TERM=xterm-256color #(make sure this is right on OSX)
-
 # stop annoying beep
 unsetopt beep
 
@@ -67,7 +58,6 @@ case `uname` in
   Darwin)
     eval "$(gdircolors ~/.dir_colors)"
     alias "ls=gls --color=auto --group-directories-first"
-    alias "core=cd ~/code/Code42/core"
     ;;
   Linux)
     eval "$(dircolors ~/.dir_colors)"
@@ -96,23 +86,3 @@ source $HOME/.aliases
 
 # this fixes something and I don't remember what...
 eval "`npm completion`"
-
-canILeaveYet() {
-  TIME_TO_LEAVE='5:00PM'
-  TIME_TILL_FIVE=$(( $(date -d $TIME_TO_LEAVE +%s) - $(date +%s) ))
-  EIGHT_HOURS=28800000
-  if [ $TIME_TILL_FIVE -gt $EIGHT_HOURS ]
-    then
-      echo "You are here way to early!"
-  elif [ $TIME_TILL_FIVE -lt "0" ]
-    then
-      echo "You should be gone already!"
-  else
-      echo $(date -u -d @$TIME_TILL_FIVE +'%Hh %Mm %Ss till 5:00PM')
-  fi
-  if [ $(date +%G) -eq "2015" ]
-    then
-      echo "It's still 2015 :("
-  fi
-}
-eval "$(rbenv init -)"
