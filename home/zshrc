@@ -81,8 +81,7 @@ man() {
     man "$@"
 }
 
-source ~/.profile
-source $HOME/.aliases
+export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
 
-# this fixes something and I don't remember what...
-eval "`npm completion`"
+source ~/.PROFILE
+source $HOME/.ALIASES
