@@ -2,10 +2,12 @@
 	name = Ryan Mulcahy
 	email = rmulcahy@gravie.com
 [push]
-	default = upstream
+	default = simple
 [diff]
 	tool = opendiff
 [color]
 	ui = true
 [core]
 	editor = emacsclient -nw
+[rebase]
+	autosquash = true
