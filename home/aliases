@@ -6,3 +6,5 @@ alias date=gdate
 alias open-ports='sudo lsof -i -P | grep -i "listen"'
 alias vim='emacsclient -nw'
 alias gemacs='open -a /Applications/Emacs.app $1'
+alias vim='emacsclient -nw'
+

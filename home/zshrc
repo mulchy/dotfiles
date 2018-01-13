@@ -50,6 +50,7 @@ plugins=(git rails ruby lein cabal brew docker httpie npm tmux osx)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
 # stop annoying beep
 unsetopt beep
 
@@ -84,4 +85,8 @@ man() {
 export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
 
 source ~/.PROFILE
+<<<<<<< 29e2187f71aae5570092506097ccf8d1eefd5b3f
 source $HOME/.ALIASES
+=======
+source $HOME/.ALIASES
+>>>>>>> Merge
